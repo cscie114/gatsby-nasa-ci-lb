@@ -20,6 +20,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - run: pwd && ls -l
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
@@ -27,4 +28,4 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run lint
-    - run: npm run test
+    - run: npm run test:unit
