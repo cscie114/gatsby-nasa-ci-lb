@@ -1,4 +1,5 @@
-name: Node.js E2E
+# End-to-End testing workflow
+name: E2E
 
 on: [workflow_dispatch]
 

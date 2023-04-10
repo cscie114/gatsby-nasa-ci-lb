@@ -6,9 +6,8 @@ Key features:
 - Uses [gatsby-source-filesystem](https://www.gatsbyjs.com/plugins/gatsby-source-filesystem/) and [gatsby-transformer-json](https://www.gatsbyjs.com/plugins/gatsby-transformer-json/) to parse local JSON data.
 - Creates pages programmatically using Gatsby's [createPage()](https://www.gatsbyjs.com/docs/reference/config-files/actions/#createPage) function in `gatsby-node.js`.
 - Implements basic pagination in `gatsby-node.js`.
-- Uses components to render image and video media types.
-- Implements search page to demonstrate hydration.
-- Uses GitHub actions for some CI and CD stuff.
+- Demonstrates hydration functionality on the search page.
+- Uses GitHub actions for CI and CD (see `.github/workflows`)
 
 ## Quickstart
 
@@ -19,9 +18,16 @@ npm run develop
 
 Then visit http://localhost:8000/
 
+## Testing
+
+```sh
+npm run lint
+npm run test
+```
+
 ## Refreshing the data
 
-A snapshot of the data is stored locally and then sourced by Gatsby.
+A snapshot of the data is stored locally and sourced by Gatsby.
 
 To refresh the data:
 
@@ -33,8 +39,8 @@ export END_DATE=$(date +%Y-%m-%d)
 curl -s "https://api.nasa.gov/planetary/apod?api_key=$NASA_API_KEY&start_date=$START_DATE&end_date=$END_DATE" | python3 -m json.tool >data/nasa.json
 ```
 
-## Future directions
+## Github Actions
 
-Wouldn't it be great if the data was sourced directly from the API so we didn't have to refresh our local snapshot?
+This project implements a basic CI/CD workflow using [Github Actions](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs). Any push to `main` or pull request to `main` will trigger this workflow. It will run linting checks and unit tests concurrently, and then proceed to deploy to netlify if both checks pass. Netlify will deploy a preview for PRs, otherwise it will deploy to production if the push is to `main`.
 
-We could do that using Gatsby's [Node APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/) and in particular the [sourceNodes](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/#sourceNodes) extension point along with something like [node-fetch](https://www.npmjs.com/package/node-fetch).
+For details, see `.github/workflows/ci.yml`.
