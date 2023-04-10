@@ -5,7 +5,7 @@ import AstroMedia from "../../components/astro-media";
 
 const ArchiveDetailPage = ({ data }) => {
   const apod = data.allNasaJson.nodes[0];
-  console.log(data);
+
   return (
     <Layout pageTitle={apod.display_date}>
       <h3>{apod.title}</h3>
