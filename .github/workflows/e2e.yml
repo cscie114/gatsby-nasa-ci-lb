@@ -12,5 +12,5 @@ jobs:
         with:
           build: npm run build
           start: npm run serve
-          wait-on: http://localhost:9000
+          wait-on: 'http://[::1]:9000'
           browser: chrome
