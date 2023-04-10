@@ -8,7 +8,7 @@ Key features:
 - Implements basic pagination in `gatsby-node.js`.
 - Uses components to render image and video media types.
 - Implements search page to demonstrate hydration.
-- Uses GitHub actions for some CI stuff.
+- Uses GitHub actions for some CI and CD stuff.
 
 ## Quickstart
 
