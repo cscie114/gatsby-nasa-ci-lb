@@ -13,6 +13,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
     "lint": "eslint --ext js,jsx src",
     "test:unit": "jest --passWithNoTests",
     "test:e2e": "cypress run",
