@@ -6,7 +6,7 @@ import Pagination from '../components/pagination'
 
 const AstroListPage = ({ data, pageContext }) => {
   const images = data?.allNasaJson?.nodes || [];
-  console.log(pageContext);
+
   return (
     <Layout pageTitle="Archives">
       <ul>
