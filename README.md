@@ -29,6 +29,8 @@ npm run lint
 npm run test
 ```
 
+Note that the [Gatsby Unit Testing](https://www.gatsbyjs.com/docs/how-to/testing/unit-testing/) documentation was used to setup jest.
+
 To run cypress e2e tests:
 
 ```sh
