@@ -1,3 +1,5 @@
+![CI workflow](https://github.com/cscie114/gatsby-nasa-ci/actions/workflows/ci.yml/badge.svg?branch=main)
+
 # Gatsby Nasa Example
 
 This is an example using [Gatsby](https://www.gatsbyjs.com/) with sample JSON data from [NASA's Astronomy Picture of the Day (APOD) API](https://api.nasa.gov/).
