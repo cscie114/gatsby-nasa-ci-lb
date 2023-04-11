@@ -43,4 +43,4 @@ curl -s "https://api.nasa.gov/planetary/apod?api_key=$NASA_API_KEY&start_date=$S
 
 This project implements a basic CI/CD workflow using [Github Actions](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs). Any push to `main` or pull request to `main` will trigger this workflow. It will run linting checks and unit tests concurrently, and then proceed to deploy to netlify if both checks pass. Netlify will deploy a preview for PRs, otherwise it will deploy to production if the push is to `main`.
 
-For details, see `.github/workflows/ci.yml`.
+See details in `.github/workflows/ci.yml`.
