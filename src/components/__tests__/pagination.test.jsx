@@ -7,3 +7,8 @@ test('renders the pagination component', () => {
   debug();
   expect(screen.queryAllByRole('link')).toHaveLength(5)
 });
+
+test('does not render the pagination component', () => {
+  const { debug } = render(<Pagination currentPage={0} numPages={0} />);
+  expect(screen.queryAllByRole('link')).toHaveLength(0)
+});
